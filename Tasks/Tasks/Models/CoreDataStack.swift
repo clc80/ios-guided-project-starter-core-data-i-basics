@@ -11,7 +11,7 @@ import CoreData
 
 class CoreDataStack {
     
-    //This is a shared instance of the Core Data Stack
+    // This is a shared instance of the Core Data Stack
     static let shared = CoreDataStack()
     
     lazy var container: NSPersistentContainer = {
@@ -24,7 +24,7 @@ class CoreDataStack {
         return container
     }()
     
-    //Makes the access to the context faster
+    // Makes the access to the context faster
     // Reminds you to use the context on the main queue
     
     var mainContext: NSManagedObjectContext {
