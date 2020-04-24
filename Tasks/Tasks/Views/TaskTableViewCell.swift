@@ -13,5 +13,10 @@ class TaskTableViewCell: UITableViewCell {
     // MARK: - Properties
     
     // MARK: - IBOutlets
+    @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var completedButton: UIButton!
     
+    
+    @IBAction func completeToggled(_ sender: Any) {
+    }
 }
