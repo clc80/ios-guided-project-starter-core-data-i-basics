@@ -38,7 +38,10 @@ class TasksTableViewController: UITableViewController {
 
     
     // MARK: - View Lifecycle
-
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
     
     //MARK: - IBAction
     
@@ -46,13 +49,18 @@ class TasksTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return tasks.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: TaskTableViewCell.reuseIdentifier, for: indexPath) as? TaskTableViewCell else {
+            fatalError("Cant't deque cell of type \(TaskTableViewCell.reuseIdentifier)")
+            
+        }
+        
+        let task = tasks[indexPath.row]
+        // This will trigger the updateViews in the cell didSet
+        cell.task = task
 
         return cell
     }
