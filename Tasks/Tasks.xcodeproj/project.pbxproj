@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		3AC82C8B244FDCA00058DBF2 /* Tasks.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3AC82C89244FDCA00058DBF2 /* Tasks.xcdatamodeld */; };
 		3AC82C8D244FE3700058DBF2 /* Task+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC82C8C244FE3700058DBF2 /* Task+Convenience.swift */; };
-		3AC82C8F244FE7420058DBF2 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC82C8E244FE7420058DBF2 /* CoreDataStack.swift */; };
+		3AC82CC924528CE60058DBF2 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC82CC824528CE60058DBF2 /* CoreDataStack.swift */; };
 		CEB451C8244E59CD00E5F9AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB451C7244E59CD00E5F9AD /* AppDelegate.swift */; };
 		CEB451CA244E59CD00E5F9AD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB451C9244E59CD00E5F9AD /* SceneDelegate.swift */; };
 		CEB451CF244E59CD00E5F9AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB451CD244E59CD00E5F9AD /* Main.storyboard */; };
@@ -23,8 +23,8 @@
 /* Begin PBXFileReference section */
 		3AC82C8A244FDCA00058DBF2 /* Tasks.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Tasks.xcdatamodel; sourceTree = "<group>"; };
 		3AC82C8C244FE3700058DBF2 /* Task+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+Convenience.swift"; sourceTree = "<group>"; };
-		3AC82C8E244FE7420058DBF2 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CoreDataStack.swift; path = "Tasks/Application/New Group/CoreDataStack.swift"; sourceTree = SOURCE_ROOT; };
 		3AC82CC62452837B0058DBF2 /* Tasks 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Tasks 2.xcdatamodel"; sourceTree = "<group>"; };
+		3AC82CC824528CE60058DBF2 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		CEB451C4244E59CD00E5F9AD /* Tasks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tasks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEB451C7244E59CD00E5F9AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEB451C9244E59CD00E5F9AD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,14 +48,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3AC82CC5245281E20058DBF2 /* Models */ = {
+		3AC82CC724528BA10058DBF2 /* New Group */ = {
 			isa = PBXGroup;
 			children = (
-				3AC82C89244FDCA00058DBF2 /* Tasks.xcdatamodeld */,
-				3AC82C8C244FE3700058DBF2 /* Task+Convenience.swift */,
-				3AC82C8E244FE7420058DBF2 /* CoreDataStack.swift */,
+				3AC82CC824528CE60058DBF2 /* CoreDataStack.swift */,
 			);
-			path = Models;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		CEB451BB244E59CD00E5F9AD = {
@@ -77,7 +75,6 @@
 		CEB451C6244E59CD00E5F9AD /* Tasks */ = {
 			isa = PBXGroup;
 			children = (
-				3AC82CC5245281E20058DBF2 /* Models */,
 				CEB451E1244E5B5700E5F9AD /* Application */,
 				CEB451E2244E5B6000E5F9AD /* View Controllers */,
 				CEB451E3244E5B6900E5F9AD /* Views */,
@@ -91,6 +88,9 @@
 		CEB451E1244E5B5700E5F9AD /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				3AC82CC724528BA10058DBF2 /* New Group */,
+				3AC82C89244FDCA00058DBF2 /* Tasks.xcdatamodeld */,
+				3AC82C8C244FE3700058DBF2 /* Task+Convenience.swift */,
 				CEB451C7244E59CD00E5F9AD /* AppDelegate.swift */,
 				CEB451C9244E59CD00E5F9AD /* SceneDelegate.swift */,
 			);
@@ -193,7 +193,7 @@
 				CEB451DE244E5B3E00E5F9AD /* TasksTableViewController.swift in Sources */,
 				CEB451DC244E5B3300E5F9AD /* TaskTableViewCell.swift in Sources */,
 				CEB451E0244E5B4800E5F9AD /* CreateTaskViewController.swift in Sources */,
-				3AC82C8F244FE7420058DBF2 /* CoreDataStack.swift in Sources */,
+				3AC82CC924528CE60058DBF2 /* CoreDataStack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

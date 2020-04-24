@@ -16,6 +16,7 @@ class CreateTaskViewController: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet var namedTextField: UITextField!
     @IBOutlet var notesTextView: UITextView!
+    @IBOutlet var priorityControl: UISegmentedControl!
     
     // MARK: - View Lifecycle
     
@@ -33,10 +34,15 @@ class CreateTaskViewController: UIViewController {
             !name.isEmpty else { return }
         let notes = notesTextView.text
         
+        let selectedPriority = priorityControl.selectedSegmentIndex
+        
+        let priority = TaskPriority.allCases[selectedPriority]
+        
         Task(name: name,
              notes: notes,
              complete: complete,
-             context: CoreDataStack.shared.mainContext)
+             priority: priority,
+            context: CoreDataStack.shared.mainContext)
         
         do {
             try CoreDataStack.shared.mainContext.save()
